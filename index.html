@@ -67,17 +67,18 @@
 <body>
     <header>
         <h1>Privacy Policy for Graxybot</h1>
-        <p><strong>Effective date:</strong> October 27, 2025</p>
+        <p><strong>Effective date:</strong> November 29, 2025</p>
         <p>Graxybot is published by Damian Salerno (“we,” “our,” or “us”). This Privacy Policy explains the personal information the Graxybot iOS app (“App”) collects, how it is used, and the choices available to you. The App is designed for individual users who are at least 13 years old.</p>
     </header>
 
     <section>
         <h2>Summary</h2>
         <ul>
-            <li>Graxybot only asks for the information it needs to personalize conversations, generate responses, and enforce fair-use limits.</li>
-            <li>Your chat messages, prompts, and optional images are sent to our secure proxy and forwarded to a third-party AI model provider to generate replies. We do not sell or share your information for advertising.</li>
-            <li>The App stores your name (if provided), chat history, gallery images, and usage counters locally on your device. You can remove them at any time from the App.</li>
-            <li>If you contact us or use the in-app feedback email, we will use the information you provide to respond to you.</li>
+            <li>Graxybot collects information needed to facilitate real-time messaging, generate AI responses, and ensure user safety.</li>
+            <li>Your chat messages, usernames, and room details are stored in the cloud (Firebase) to sync across devices and deliver messages to other users.</li>
+            <li>Message snippets may be sent to our AI providers to generate context-aware bot replies.</li>
+            <li>We offer tools for safety, including optional censorship filters, blocking, and reporting mechanisms.</li>
+            <li>You can delete your profile or specific chats at any time; data is removed from active display immediately but may persist briefly in backups.</li>
         </ul>
     </section>
 
@@ -85,75 +86,89 @@
         <h2>Information We Collect</h2>
         <p>The following information is collected when you use Graxybot:</p>
         <ol>
-            <li><strong>Chat content you provide.</strong> Text prompts, conversation history, and any optional settings (such as your preferred response style) are captured when you interact with Graxybot. Optional photos or images that you attach are also collected when you choose to send them.</li>
-            <li><strong>Display name (optional).</strong> You may supply a name so Graxybot can address you personally. The name is stored locally on your device.</li>
-            <li><strong>Usage counters.</strong> We maintain rolling counters (message and image credits) to enforce rate limits. These counters are stored locally using Apple’s <code>UserDefaults</code>.</li>
-            <li><strong>Generated images.</strong> Images created through the App’s AI image tool are saved locally in the App’s private Documents directory. They are not uploaded unless you choose to share them.</li>
-            <li><strong>Diagnostic logs.</strong> Our Vercel-hosted proxy automatically receives standard HTTP request metadata (e.g., IP address, user agent) when the App contacts it. These logs are used to keep the service reliable and secure.</li>
+            <li><strong>User-Generated Content (UGC).</strong> This includes text messages, conversation history, room names, and any images you choose to upload or generate. This content is processed to deliver messages to other users in real-time and to provide AI-generated responses.</li>
+            <li><strong>Profile Information.</strong> We collect your display name/username and any optional profile details. This information is visible to other users in chat rooms and messaging threads.</li>
+            <li><strong>Usage Counters & Credits.</strong> We maintain counters for message and image generation limits. These are synced to your account to enforce fair use.</li>
+            <li><strong>Generated Images.</strong> Images created through the App’s AI tools are saved to your account and local device.</li>
+            <li><strong>Device & Diagnostic Logs.</strong> Our servers and hosting providers (e.g., Vercel, Firebase) automatically receive standard metadata (IP address, user agent, crash reports) to maintain service security, reliability, and analytics.</li>
         </ol>
-        <p>Graxybot does <strong>not</strong> request access to your contacts, precise location, motion data, or device identifiers beyond what Apple provides automatically. The App does not use third-party analytics or advertising SDKs.</p>
+        <p>Graxybot does <strong>not</strong> request access to your contacts, precise location, or motion data beyond what is required for basic app functionality.</p>
     </section>
 
     <section>
         <h2>How We Use Information</h2>
-        <p>We use the information described above to:</p>
+        <p>We use the collected information to:</p>
         <ul>
-            <li>Generate AI-powered chat responses and optional images at your request.</li>
-            <li>Maintain your ongoing conversations, personalized settings, and gallery entries within the App.</li>
-            <li>Enforce message and image usage limits to prevent abuse and protect service quality.</li>
-            <li>Diagnose service reliability issues, detect misuse, and improve the App’s performance.</li>
-            <li>Respond to support requests or other inquiries.</li>
+            <li>Deliver real-time messages and sync conversation history across your devices.</li>
+            <li>Generate contextual AI responses by analyzing recent message snippets in active conversations.</li>
+            <li>Display your profile identity to other users within chat rooms.</li>
+            <li>Enforce content moderation policies and investigate reports of abuse.</li>
+            <li>Maintain usage limits and improve App performance.</li>
         </ul>
     </section>
 
     <section>
-        <h2>Information Sharing</h2>
-        <p>We only share your information as necessary to deliver the App’s core features or comply with the law:</p>
+        <h2>Information Sharing & Third-Party Processors</h2>
+        <p>We share data only as necessary to provide the App’s core features:</p>
         <ul>
-            <li><strong>AI model providers.</strong> When you send a prompt or image, our App forwards the content to our secure proxy (<code>https://graxybot-proxy.vercel.app</code>), which then relays it to OpenAI, the AI model provider that powers Graxybot’s responses. OpenAI may temporarily store the information as described in its own <a href="https://openai.com/policies/privacy-policy">privacy policy</a>. We do not permit OpenAI to use your data for advertising.</li>
-            <li><strong>Infrastructure services.</strong> We rely on trusted third parties (e.g., Vercel for hosting, Apple for iOS services) to operate the App. These providers process your information on our behalf under contractual obligations.</li>
-            <li><strong>Legal requirements.</strong> We may disclose information if required by law, regulation, legal process, or to protect the rights, safety, or property of our users, ourselves, or others.</li>
+            <li><strong>Cloud Storage & Database (Firebase/Firestore).</strong> We use Google Firebase to store and sync your messages, user profile, and chat rooms. This allows you to access your history on multiple devices and receive real-time updates.</li>
+            <li><strong>AI Model Providers.</strong> To generate bot responses, specific message snippets and prompts are sent to our secure proxy (<code>https://graxybot-proxy.vercel.app</code>) and forwarded to AI providers (such as OpenAI). These providers process data to generate a reply and are not permitted to use your data for advertising.</li>
+            <li><strong>Infrastructure Services.</strong> Third parties like Vercel (hosting) and Apple (iOS services) process data to keep the App running securely.</li>
+            <li><strong>Legal Compliance.</strong> We may disclose information if required by law or to protect the safety of our users.</li>
         </ul>
-        <p>We do <strong>not</strong> sell or rent your personal information.</p>
     </section>
 
     <section>
-        <h2>Data Storage and Retention</h2>
+        <h2>Content Moderation & Safety</h2>
+        <p>To ensure a safe environment for all users:</p>
         <ul>
-            <li><strong>On-device storage.</strong> Chat history, name, response-style preferences, generated images, and usage counters are stored locally on your device. You can delete them at any time by uninstalling the App or using in-app options such as “Wipe All Data (Local).”</li>
-            <li><strong>Service logs and request data.</strong> Chat requests processed through our proxy may be retained in minimal form (including time, request size, and error traces) for up to 30 days to monitor abuse and ensure service integrity. Full chat content is not intentionally stored after the request is fulfilled.</li>
-            <li><strong>Third-party providers.</strong> OpenAI may retain data long enough to deliver responses and comply with its legal obligations. Refer to OpenAI's <a href="https://openai.com/policies/privacy-policy">privacy policy</a> for details.</li>
+            <li><strong>Optional Censorship/Filtering.</strong> The App includes a user-controlled setting to filter profanity or sensitive content. When enabled, messages containing flagged keywords may be blocked or obscured locally on your device.</li>
+            <li><strong>Blocking & Reporting.</strong> You can block other users or report specific messages/profiles for violating our terms. We review these reports and may take action, including banning users or removing content.</li>
+            <li><strong>Automated Moderation.</strong> We may use automated systems to detect and prevent the transmission of illegal or highly abusive content.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Data Storage, Retention, and Deletion</h2>
+        <ul>
+            <li><strong>Cloud Storage.</strong> Your messages, profile, and room data are stored securely in the cloud (Firebase). This data persists until you choose to delete it.</li>
+            <li><strong>User Deletion Controls.</strong> You can delete specific chat messages, leave rooms, or delete your entire account through the App settings.
+                <ul>
+                    <li><strong>Account Deletion:</strong> Removing your account permanently deletes your profile and private data from our active databases.</li>
+                    <li><strong>Chat Deletion:</strong> Deleting a chat removes it from your view. Note that in group settings, messages you sent may still be visible to other participants unless specific "unsend" features are used.</li>
+                </ul>
+            </li>
+            <li><strong>Backups & Logs.</strong> While data is removed from our active systems immediately upon deletion, it may persist in secure encrypted backups or server logs for a limited period (typically up to 90 days) for disaster recovery and security auditing purposes.</li>
         </ul>
     </section>
 
     <section>
         <h2>Data Security</h2>
-        <p>We implement reasonable administrative, technical, and physical safeguards to protect your information. Despite these measures, no internet transmission or storage system can be guaranteed 100% secure, so you use the App at your own risk.</p>
+        <p>We implement robust security measures, including encryption in transit and at rest for cloud data. However, no internet transmission is 100% secure. You use the App and its messaging features at your own risk.</p>
     </section>
 
     <section>
-        <h2>Your Choices and Rights</h2>
+        <h2>Your Choices</h2>
         <ul>
-            <li><strong>Control local data.</strong> Update or delete your name, response-style preferences, or generated images directly within the App. Removing the App from your device deletes its local data.</li>
-            <li><strong>Opt out of image usage.</strong> You can continue using text-only chat features without generating or attaching images.</li>
-            <li><strong>Do-not-track signals.</strong> The App does not currently respond to do-not-track signals because it does not track users across third-party apps or websites.</li>
-            <li><strong>Children.</strong> Graxybot is not intended for children under 13. If you believe we have inadvertently collected information from a child under 13, please contact us so we can delete it.</li>
+            <li><strong>Manage Profile:</strong> You can update your display name or profile details at any time.</li>
+            <li><strong>Toggle AI Features:</strong> You can choose whether to interact with AI bots or use the App solely for user-to-user messaging.</li>
+            <li><strong>Opt-out:</strong> You can uninstall the App to stop all local data collection. To remove cloud data, please use the "Delete Account" feature before uninstalling.</li>
         </ul>
     </section>
 
     <section>
         <h2>International Users</h2>
-        <p>Graxybot is developed in the United States. If you access the App from outside the United States, you consent to the transfer and processing of your information in the United States and other countries where our service providers operate. Privacy laws in these jurisdictions may differ from those in your home country.</p>
+        <p>Graxybot is operated from the United States. By using the App, you consent to the transfer and processing of your data in the U.S. and other jurisdictions where our cloud providers (Google/Firebase, Vercel) operate.</p>
     </section>
 
     <section>
         <h2>Changes to This Policy</h2>
-        <p>We may update this Privacy Policy from time to time. The “Effective date” at the top indicates when the policy was last revised. Material changes will be communicated in the App or through other appropriate means. Your continued use of Graxybot after any changes signifies your acceptance of the updated policy.</p>
+        <p>We may update this Privacy Policy to reflect changes in our features or legal obligations. The “Effective date” at the top will be updated accordingly. Continued use of the App signifies acceptance of the revised policy.</p>
     </section>
 
     <section class="contact">
         <h2>Contact</h2>
-        <p>If you have questions about this Privacy Policy or need to submit a privacy request, please contact us at <a href="mailto:thegraxisreal@gmail.com">thegraxisreal@gmail.com</a>. You can also reach out using the support information provided on the Graxybot App Store listing.</p>
+        <p>If you have questions about this Privacy Policy, data safety, or need to report a privacy concern, please contact us at <a href="mailto:thegraxisreal@gmail.com">thegraxisreal@gmail.com</a>.</p>
     </section>
 
     <footer>
